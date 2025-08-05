@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Свадебное приглашение</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Вы приглашены на нашу свадьбу!</h1>
+    <p>С любовью, Айгуль и Ернар</p>
+    <div id="countdown" class="timer">Загрузка таймера…</div>
+
+    <section id="rsvp">
+      <h2>Подтвердите своё участие</h2>
+      <form id="rsvpForm">
+        <input name="name" type="text" placeholder="Ваше имя" required>
+        <select name="guests" required>
+          <option value="" disabled selected>Сколько гостей?</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3+">3 или больше</option>
+        </select>
+        <textarea name="message" placeholder="Комментарий"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+      <div id="rsvpStatus"></div>
+    </section>
+
+    <section id="schedule">
+      <h2>Расписание дня</h2>
+      <ul>
+        <li>15:00 – Церемония</li>
+        <li>16:00 – Фуршет</li>
+        <li>18:00 – Банкет</li>
+        <li>21:00 – Танцы & тортик</li>
+      </ul>
+    </section>
+
+    <section id="map">
+      <h2>Место проведения</h2>
+      <div id="map-container">
+        <!-- Вставка Google Maps -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!...yourMapLink"
+          width="100%" height="300" style="border:0;" allowfullscreen=""
+          loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <div class="gallery-grid">
+        <img src="assets/photo1.jpg" alt="">
+        <img src="assets/photo2.jpg" alt="">
+        <img src="assets/photo3.jpg" alt="">
+        <img src="assets/photo4.jpg" alt="">
+      </div>
+    </section>
+
+    <section id="seating">
+      <h2>Рассадка гостей</h2>
+      <div id="seating-chart"></div>
+    </section>
+
+    <div class="footer">
+      Ждём вас 20 сентября 2025 года ♥
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
